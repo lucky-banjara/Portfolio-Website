@@ -77,7 +77,9 @@ export const Navbar = () =>{
                 > 
                 {link.label} </a>
               ))} 
+              <a href="#contact">
                <Button size = "sm">Contact Me</Button>
+              </a>
          </div>
         </div>
         )}

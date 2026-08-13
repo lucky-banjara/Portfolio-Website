@@ -7,6 +7,10 @@ import {
 //   Twitter,
   Download,
 } from "lucide-react";
+
+import { siGithub, siX } from 'simple-icons';
+
+
 import { AnimatedBorderButton } from "../components/AnimatedBorderButton";
 
 const skills = [
@@ -14,7 +18,7 @@ const skills = [
   "Next.js",
   "TypeScript",
   "Node.js",
-  "GraphQL",
+  "RESTApi",
   "PostgreSQL",
   "MongoDB",
   "Redis",
@@ -70,7 +74,7 @@ export const Hero = () => {
             <div className="animate-fade-in">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
-                Software Engineer • React Specialist
+                Software Engineer • a Lattice Career
               </span>
             </div>
 
@@ -86,20 +90,30 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
-                Hi, I'm Anjan Banjara — a software engineer studying at Curtin University. I build scalable, performant web
-                applications that users love.
+                Hi, I'm Anjan Banjara ; a Master of Computing student at Curtin University and versatile IT professional with background in Web Development, IT Supervision, and Network Engineering.
               </p>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4 animate-fade-in animation-delay-300">
-              <Button size="lg">
-                Contact Me <ArrowRight className="w-5 h-5" />
-              </Button>
+              <a href="#contact">
+               <Button size="lg">
+                 Contact Me <ArrowRight className="w-5 h-5" />
+               </Button>
+              </a>
+              {/* Added anchor tag wrapper with download attributes */}
+              <a 
+                href="/anjan-banjara-cv.pdf" 
+                download="Anjan_Banjara_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
               <AnimatedBorderButton>
                 <Download className="w-5 h-5" />
                 Download CV
               </AnimatedBorderButton>
+
+              </a>
             </div>
 
             {/* Social Links */}
@@ -119,6 +133,33 @@ export const Hero = () => {
                 </a>
               ))}
             </div> */}
+
+
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow me: </span>
+              {[
+                   { path: siGithub.path, href: "#" },
+                //    { path: siLinkedin.path, href: "#" },
+                   { path: siX.path, href: "#" },
+               ].map((social, idx) => (
+                 <a
+                   key={idx}
+                   href={social.href}
+                   className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300 flex items-center justify-center"
+                 >
+                   <svg
+                     role="img"
+                     viewBox="0 0 24 24"
+                     className="w-5 h-5 fill-current"
+                   >
+                     <path d={social.path} />
+                   </svg>
+                 </a>
+               ))}
+            </div>
+
+
+
           </div>
           {/* Right Column - Profile Image */}
           <div className="relatice animate-fade-in animation-delay-300">
@@ -148,8 +189,8 @@ export const Hero = () => {
                 </div>
                 {/* Stats Badge */}
                 <div className="absolute -top-4 -left-4 glass rounded-xl px-4 py-3 animate-float animation-delay-500">
-                  <div className="text-2xl font-bold text-primary">5+</div>
-                  <div className="text-xs text-muted-foreground">
+                  <div className="text-2xl font-bold text-primary">7+</div>
+                  <div className="text-xs text-muted-foreground ">
                     Years Exp.
                   </div>
                 </div>
