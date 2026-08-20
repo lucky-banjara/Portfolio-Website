@@ -26,10 +26,10 @@ const skills = [
   "AWS",
   "Vercel",
   "Tailwind CSS",
-  "Prisma",
+  "Jira",
   "Jest",
-  "Cypress",
-  "Figma",
+  "Render",
+  "Bitbucket",
   "Git",
   "GitHub Actions",
 ];
@@ -138,7 +138,7 @@ export const Hero = () => {
             <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
               <span className="text-sm text-muted-foreground">Follow me: </span>
               {[
-                   { path: siGithub.path, href: "#" },
+                   { path: siGithub.path, href: "https://github.com/lucky-banjara" , target: "_blank"},
                 //    { path: siLinkedin.path, href: "#" },
                    { path: siX.path, href: "#" },
                ].map((social, idx) => (

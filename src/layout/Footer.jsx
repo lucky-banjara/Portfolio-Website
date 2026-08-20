@@ -2,7 +2,7 @@ import {  Heart } from "lucide-react";
 import { siGithub, siX } from 'simple-icons';
 
 const socialLinks = [
-  { icon: siGithub, href: "#", label: "Github" },
+  { icon: siGithub, href: "https://github.com/lucky-banjara", label: "Github" , target: "_blank" },
 //   { icon: Linkedin, href: "#", label: "LinkedIn" }
   { icon: siX, href: "#", label: "X" }
 ];
